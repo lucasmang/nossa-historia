@@ -1,0 +1,141 @@
+/* Reset básico */
+* {
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    width: 900px;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    background-color: #ffcff5;
+  }
+  
+  /* Estilizando o cabeçalho fixo */
+  .header {
+    position: sticky;
+    top: 0;
+    background-color: #fa5fd9;
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    z-index: 1000;
+    color: rgb(235, 226, 226);
+  }
+  main{
+    background-color: #f7ade7;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  div{
+    text-align: center;
+  }
+  h2{
+    padding-bottom: 20px;
+    color: rgb(249, 247, 247);
+  }
+
+
+
+
+    /*seção de links */
+.links {
+    display: flex;            /* Habilita o Flexbox */
+    flex-direction: column;   /* Coloca os itens na vertical */
+    align-items: center;      /* Centraliza os itens no eixo horizontal */
+    gap: 15px;                /* Espaçamento entre os botões */
+    margin: 20px auto;        /* Centraliza a seção na página */
+  }
+    /* Estilo dos botões */
+.links a {
+    display: block;            /* Garante que cada link seja tratado como bloco */
+    width: 400px;              /* Largura fixa menor para os botões */
+    text-align: center;        /* Centraliza o texto no botão */
+    padding: 8px 0;            /* Ajusta o tamanho interno */
+    font-size: 1em;            /* Reduz o tamanho do texto */
+    color: #fff;
+    background-color: #f77dda;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    }
+      
+.links a:hover {
+    background-color: #d152b3;
+    }
+    .foto-maior {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      
+      .foto-principal {
+        width: 50%;
+        height: 500px; /* Definindo a altura padrão */
+        object-fit: cover; /* Ajusta a largura sem distorcer a imagem */
+        border: 2px solid #fa5fd9;
+        border-radius: 10px;
+      }
+      
+      
+/* Estilização do container do carrossel */
+.carrossel-container {
+    position: relative;
+    width: 820px; /* Largura total do carrossel */
+    margin: 0 auto; /* Centraliza o carrossel */
+    overflow: hidden; /* Oculta os elementos que saem da área visível */
+    display: flex;
+    align-items: center;
+    padding: 20px 50px 30px 30px; /* Padding de 50px à direita, 30px à esquerda e 20px no topo */
+}
+
+/* Estilização do carrossel */
+.carrossel {
+    display: flex;
+    transition: transform 0.3s ease-in-out; /* Animação ao mover o carrossel */
+    gap: 10px;
+    width: 100%; /* Largura 100% do contêiner, sem subtrair padding */
+}
+
+/* Estilo das imagens no carrossel */
+.carrossel .miniatura {
+    flex: 0 0 auto; /* Garante que as imagens fiquem lado a lado */
+    width: 150px;   /* Define o tamanho das miniaturas */
+    height: 130px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilização das setas */
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.seta.esquerda {
+    left: 40px; /* Ajuste da seta esquerda */
+}
+
+.seta.direita {
+    right: 20px; /* Ajuste da seta direita para não cortar */
+}
+
+.seta:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
